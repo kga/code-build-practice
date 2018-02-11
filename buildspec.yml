@@ -1,0 +1,9 @@
+version: 0.1
+
+phases:
+  install:
+    commands:
+      - docker build -t human .
+  build:
+    commands:
+      - docker run --rm human carton exec prove -lvr t/
